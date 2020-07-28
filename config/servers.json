@@ -1,0 +1,45 @@
+{
+
+    "development":{
+        "connector":[
+             {"id":"connector-server-1", "host":"212.64.74.163", "port":3150, "clientPort": 3040, "frontend": true},
+             {"id":"connector-server-2", "host":"212.64.74.163", "port":3151, "clientPort": 3041, "frontend": true},
+             {"id":"connector-server-3", "host":"212.64.74.163", "port":3152, "clientPort": 3042, "frontend": true}
+         ],
+        "chat":[
+             {"id":"chat-server-1", "host":"212.64.74.163", "port":3110},
+             {"id":"chat-server-2", "host":"212.64.74.163", "port":3111}
+        ],
+        "game":[
+             {"id":"game-server-1", "host":"212.64.74.163", "port":3020},
+             {"id":"game-server-2", "host":"212.64.74.163", "port":3021}
+        ],
+        "gate":[
+           {"id": "gate-server-1", "host": "212.64.74.163", "clientPort": 3010, "frontend": true}
+        ],
+        "gamehttp":[
+            {"id": "gamehttp","host": "212.64.74.163","port": 3001}
+        ]
+    },
+    "production":{
+        "connector":[
+             {"id":"connector-server-1", "host":"212.64.74.163", "port":3150, "clientPort": 3040, "frontend": true},
+             {"id":"connector-server-2", "host":"212.64.74.163", "port":3151, "clientPort": 3041, "frontend": true},
+             {"id":"connector-server-3", "host":"212.64.74.163", "port":3152, "clientPort": 3042, "frontend": true}
+         ],
+        "chat":[
+             {"id":"chat-server-1", "host":"212.64.74.163", "port":3110},
+             {"id":"chat-server-2", "host":"212.64.74.163", "port":3111}
+        ],
+        "game":[
+             {"id":"game-server-1", "host":"212.64.74.163", "port":3020},
+             {"id":"game-server-2", "host":"212.64.74.163", "port":3021}
+        ],
+        "gate":[
+           {"id": "gate-server-1", "host": "212.64.74.163", "clientPort": 3010, "frontend": true}
+        ],
+        "gamehttp":[
+            {"id": "gamehttp","host": "212.64.74.163","port": 3001}
+        ]
+    }
+}

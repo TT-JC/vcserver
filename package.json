@@ -1,0 +1,16 @@
+{
+	"name": "vcserver",
+	"version": "0.0.1",
+	"private": false,
+	"dependencies": {
+		"generic-pool": "2.0.0",
+		"async": ">=0.0.1",
+		"mysql": "latest",
+		"pomelo": "2.2.x",
+		"pomelo-sync-plugin": "0.0.1",
+		"pomelo-http-plugin":"latest",
+		"express": "2.5.2",
+		"connect": ">=0.0.1",
+		"node-csv":"latest"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"development": {
+	    "host" : "localhost",
+		"port" : "3306",
+		"database" : "ll_hackathon_s1",
+		"user" : "myuser",
+		"password" : "55239839331"
+	},
+
+	"production": {
+	    "host" : "localhost",
+		"port" : "3306",
+		"database" : "ll_hackathon_s1",
+		"user" : "myuser",
+		"password" : "55239839331"
+	}
+}
