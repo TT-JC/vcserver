@@ -9,7 +9,7 @@
 		"pomelo": "2.2.x",
 		"pomelo-sync-plugin": "0.0.1",
 		"pomelo-http-plugin":"latest",
-		"express": "2.5.2",
+		"express": "4.17.1",
 		"connect": ">=0.0.1",
 		"node-csv":"latest"
 	}
