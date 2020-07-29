@@ -131,8 +131,9 @@ userDao.getRoomInfo = function (uid, cb) {
         function (callback) {
             sql = 'select * from game_classroom_user where uid = ? and startTime > ? order by startTime asc';
             args = [uid, time];
+            console.info("uid&time: " + uid + "," + time);
             connection.query(sql, args, function (err, res) {
-                console.info("roomlist_getroominfo" + res);
+                console.info("roomlist_getroominfo: " + res);
                 if (!!res) roomlist = res;
                 callback(err);
             });
