@@ -39,7 +39,7 @@ Handler.prototype.queryEntry = function (msg, session, next) {
             var connectors = self.app.getServersByType('connector');
             // console.log("connectors:" + connectors);
             // console.log("connectorslen:" + connectors.length);
-            if (!connectors || connectors.length === 0) {
+            if (!connectors) {
                 next(null, {
                     code: 500
                 });
