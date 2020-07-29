@@ -10,26 +10,28 @@ var accountDao = module.exports;
  * @param {function} cb
  */
 accountDao.getAccountInfo = function (account, cb) {
-	var sql = 'select * from system_user_info where username = ?';
-	var args = [account];
-	pomelo.app.get('dbclient').queryOne(sql,args,function(err, res) {
-		if(err){
-			utils.invokeCallback(cb, err, null);
-		}else{
-			utils.invokeCallback(cb, err, res);
-		}
-	});
+    var sql = 'select * from system_user_info where username = ?';
+    var args = [account];
+    console.info(sql + args);
+    pomelo.app.get('dbclient').queryOne(sql, args, function (err, res) {
+        if (err) {
+            utils.invokeCallback(cb, err, null);
+        } else {
+            utils.invokeCallback(cb, err, res);
+            console.info(res);
+        }
+    });
 };
 
 accountDao.createAccount = function (account, cb) {
-	var sql = 'insert into system_user_info (username, createTime) values(?,?)';
-	var time = Math.floor(new Date().getTime()/1000);
-	var args = [account,time];
-	pomelo.app.get('dbclient').query(sql,args,function(err, res) {
-		if(err){
-			utils.invokeCallback(cb, err, null);
-		}else{
-			utils.invokeCallback(cb, err, {"id":res.insertId,"account":account,"createTime":time});
-		}
-	});
+    var sql = 'insert into system_user_info (username, createTime) values(?,?)';
+    var time = Math.floor(new Date().getTime() / 1000);
+    var args = [account, time];
+    pomelo.app.get('dbclient').query(sql, args, function (err, res) {
+        if (err) {
+            utils.invokeCallback(cb, err, null);
+        } else {
+            utils.invokeCallback(cb, err, { "id": res.insertId, "account": account, "createTime": time });
+        }
+    });
 };
