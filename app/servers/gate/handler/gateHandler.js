@@ -46,7 +46,9 @@ Handler.prototype.queryEntry = function (msg, session, next) {
                 return;
             }
             // select connector
-            console.info(connectors)
+            console.info(connectors);
+            var count = connectors.length;
+            console.info("count=", count);
             var res = dispatcher.dispatch(uid, connectors);
             host = res.host;
             port = res.clientPort;
