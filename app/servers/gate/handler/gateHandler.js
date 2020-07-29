@@ -37,7 +37,7 @@ Handler.prototype.queryEntry = function (msg, session, next) {
         function (id, cb) {
             uid = id;
             var connectors = self.app.getServersByType('connector');
-            console.log("connectors:" + connectors);
+            // console.log("connectors:" + connectors);
             console.log("connectorslen:" + connectors.length);
             if (!connectors || connectors.length === 0) {
                 next(null, {
