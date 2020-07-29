@@ -39,13 +39,14 @@ Handler.prototype.queryEntry = function (msg, session, next) {
             var connectors = self.app.getServersByType('connector');
             // console.log("connectors:" + connectors);
             // console.log("connectorslen:" + connectors.length);
-            if (!connectors) {
+            if (!connectors || connectors.length === 0) {
                 next(null, {
                     code: 500
                 });
                 return;
             }
             // select connector
+            console.info(connectors)
             var res = dispatcher.dispatch(uid, connectors);
             host = res.host;
             port = res.clientPort;
