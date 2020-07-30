@@ -129,7 +129,7 @@ userDao.getRoomInfo = function (uid, cb) {
     var roomlist, sql, args;
     async.series([
         function (callback) {
-            sql = 'select * from game_classroom_user where uid = ? and startTime > ? order by startTime asc';
+            sql = 'select * from game_classroom_user where uid = ? and startTime > ? order by startTime asc';//order by 按照。。排序，asc升序，desc降序
             args = [uid, time];
             console.info("uid&time: " + uid + "," + time);
             connection.query(sql, args, function (err, res) {
